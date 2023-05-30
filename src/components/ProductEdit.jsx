@@ -51,7 +51,7 @@ const EditBox = ({ id, onDelete, index }) => {
         </Box>
 
         <Box style={{ display: 'flex', flexDirection: 'row' }}>
-          <div style={{ width: '20%', marginTop: '10px' }}>메뉴 이름</div>
+          <div style={{ width: '20%', marginTop: '10px' }}>가격</div>
           <Input
             style={{ width: '60%', height: '40px', border: '1px solid black', padding: 1 }}
             onChange={handleText2Change}

@@ -35,6 +35,11 @@ const ShopKeeper = () => {
     const goToProductSearch = () => {
         navigate("/ProductSearch")
     }
+
+    const goToProductEdit = () => {
+        navigate("/ProductEdit")
+    }
+
     const TabPanel = (props) => {
         const { children, value, index } = props;
         return (<div hidden={value !== index}>
@@ -137,21 +142,9 @@ const ShopKeeper = () => {
                                     onClick={() => setOpen(false)}>
                                     <List>
                                         <ListItem>
-                                            <ListItemButton onClick={goToMyOrderHistory}>
+                                            <ListItemButton onClick={goToProductEdit}>
                                                 <ListItemIcon><ContentCopyOutlined /></ListItemIcon>
-                                                <ListItemText primary="나의 주문 내역" />
-                                            </ListItemButton>
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListItemButton onClick={goToAlarm}>
-                                                <ListItemIcon><NotificationsNoneOutlined /></ListItemIcon>
-                                                <ListItemText primary="알림" />
-                                            </ListItemButton>
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListItemButton onClick={goToFavoriteStores}>
-                                                <ListItemIcon><BookmarkBorderOutlined /></ListItemIcon>
-                                                <ListItemText primary="찜한 가게 목록" />
+                                                <ListItemText primary="상품 편집" />
                                             </ListItemButton>
                                         </ListItem>
                                         <ListItem>
@@ -260,9 +253,18 @@ const ShopKeeper = () => {
                             </Box>
                         </Box>
 
-                        <Box sx={{ height:"200px", border: "1px solid #E0E0E0", boxShadow: "0 0 6px", marginBottom: 2, padding: 1, position:"relative" }}>
-                            <div style = {{fontWeight:"Bold"}}>가게 리뷰</div>
+                        <Box sx={{ height:"230px", border: "1px solid #E0E0E0", boxShadow: "0 0 6px", marginBottom: 2, padding: 1, position:"relative" }}>
+                        <div style = {{fontWeight:"Bold"}}>가게 리뷰</div>
                             <hr></hr>
+                            <div style = {{fontWeight:"Bold", fontSize: "14px"}}>23/05/27 리뷰 (yummyyummy님) </div>
+                            <Typography variant='h6' component="div" sx={{ color: '#393939', fontSize: "13px" }}>
+                                떡볶이가 정말 맛있었습니다! 먹다가 국물을 옷에 좀 흘렸는데 옷 닦으라고 물수건 주시고 친절하게 대해주셔서 너무 좋았어요 ㅠㅠ 다음에도 꼭 오겠습니다!
+                            </Typography>
+                            <hr></hr>
+                            <div style = {{fontWeight:"Bold", fontSize: "14px"}}>23/05/27 리뷰 (taste님) </div>
+                            <Typography variant='h6' component="div" sx={{ color: '#393939', fontSize: "13px" }}>
+                                떡볶이가 좀 많이 매워서 매운거 잘 못먹는 분들은 먹기가 힘들 것 같습니다... 그래도 맛있어요! 꽈배기도 같이 판매하셨는데 많이 샀다고 서비스 챙겨주셔서 좋았습니다 ㅎㅎ
+                            </Typography>
                         </Box>
 
                     </TabPanel>
